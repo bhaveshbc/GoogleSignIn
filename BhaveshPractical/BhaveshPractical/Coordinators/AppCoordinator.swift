@@ -21,7 +21,11 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-       
+        let loginController = LoginViewController.instantiate(fromAppStoryboard: .main)
+        loginController.coordinator = self
+        self.navigationController?.pushViewController(loginController, animated: true)
+        currentWindow.rootViewController = self.navigationController
+        currentWindow.makeKeyAndVisible()
     }
 
     func childDidFinish(_ child: Coordinator?) {
