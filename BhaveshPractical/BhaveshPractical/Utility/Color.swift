@@ -5,7 +5,6 @@
 //  Created by Bhavesh Chaudhari on 29/10/21.
 //
 
-
 import Foundation
 import UIKit
 
@@ -131,4 +130,3 @@ extension UIColor {
     }
 
 }
-

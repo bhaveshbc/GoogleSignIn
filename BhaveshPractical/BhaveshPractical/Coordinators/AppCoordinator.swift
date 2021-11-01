@@ -27,6 +27,18 @@ class AppCoordinator: Coordinator {
         currentWindow.rootViewController = self.navigationController
         currentWindow.makeKeyAndVisible()
     }
+    
+    func goback() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func moveToSignupViewController(user: User, signInService: GoogleSignInServiceProtocol?) {
+        let profileViewController = ProfileViewController.instantiate(fromAppStoryboard: .main)
+        profileViewController.loggedUser = user
+        profileViewController.googleSignInService = signInService
+        profileViewController.coordinator = self
+        self.navigationController?.pushViewController(profileViewController, animated: true)
+    }
 
     func childDidFinish(_ child: Coordinator?) {
         for (index, coordinator) in childCoordinators.enumerated() where coordinator === child {

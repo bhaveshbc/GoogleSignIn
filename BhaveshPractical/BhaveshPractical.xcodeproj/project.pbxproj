@@ -27,12 +27,17 @@
 		7C41FD52272C02C400FA53B0 /* UIViewControllerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41FD51272C02C400FA53B0 /* UIViewControllerUtility.swift */; };
 		7C41FD55272C1A8200FA53B0 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41FD54272C1A8100FA53B0 /* FloatingTextField.swift */; };
 		7C41FD57272C1B1500FA53B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41FD56272C1B1500FA53B0 /* Color.swift */; };
+		7C5DEF26272EF3BB0090C307 /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DEF25272EF3BB0090C307 /* FireStoreService.swift */; };
+		7C5DEF28272EF7D50090C307 /* LocationManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DEF27272EF7D50090C307 /* LocationManagerService.swift */; };
 		7C74B4D6272C1D1E00786EFE /* BottomCurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4D5272C1D1E00786EFE /* BottomCurvedView.swift */; };
 		7C74B4D8272C1D6B00786EFE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4D7272C1D6B00786EFE /* ShadowView.swift */; };
 		7C74B4DA272C1DBF00786EFE /* AnimaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4D9272C1DBF00786EFE /* AnimaButton.swift */; };
 		7C74B4DC272C1E6A00786EFE /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4DB272C1E6A00786EFE /* SpinnerView.swift */; };
 		7C74B4DE272C1EA900786EFE /* ShadowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4DD272C1EA900786EFE /* ShadowManager.swift */; };
 		7C74B4E0272C1EF200786EFE /* UIViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4DF272C1EF100786EFE /* UIViewUtility.swift */; };
+		7CCE86D5272C2377001265A8 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE86D4272C2377001265A8 /* GoogleSignInService.swift */; };
+		7CCE86D7272C2690001265A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE86D6272C268F001265A8 /* User.swift */; };
+		7CCE86D9272C5556001265A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE86D8272C5554001265A8 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,12 +79,17 @@
 		7C41FD51272C02C400FA53B0 /* UIViewControllerUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtility.swift; sourceTree = "<group>"; };
 		7C41FD54272C1A8100FA53B0 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		7C41FD56272C1B1500FA53B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7C5DEF25272EF3BB0090C307 /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
+		7C5DEF27272EF7D50090C307 /* LocationManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerService.swift; sourceTree = "<group>"; };
 		7C74B4D5272C1D1E00786EFE /* BottomCurvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCurvedView.swift; sourceTree = "<group>"; };
 		7C74B4D7272C1D6B00786EFE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		7C74B4D9272C1DBF00786EFE /* AnimaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimaButton.swift; sourceTree = "<group>"; };
 		7C74B4DB272C1E6A00786EFE /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		7C74B4DD272C1EA900786EFE /* ShadowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowManager.swift; sourceTree = "<group>"; };
 		7C74B4DF272C1EF100786EFE /* UIViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtility.swift; sourceTree = "<group>"; };
+		7CCE86D4272C2377001265A8 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
+		7CCE86D6272C268F001265A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7CCE86D8272C5554001265A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +145,9 @@
 		7C41FD04272B049100FA53B0 /* BhaveshPractical */ = {
 			isa = PBXGroup;
 			children = (
+				7CCE86D3272C2352001265A8 /* Service */,
 				7C41FD4E272C023400FA53B0 /* Utility */,
 				7C41FD4A272BFD1B00FA53B0 /* Modules */,
-				7C41FD3F272B074600FA53B0 /* View */,
 				7C41FD3A272B065D00FA53B0 /* Coordinators */,
 				7C41FD39272B05FC00FA53B0 /* AppDelegate */,
 				7C41FD0E272B049700FA53B0 /* Assets.xcassets */,
@@ -194,7 +204,9 @@
 		7C41FD4A272BFD1B00FA53B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7C41FD3F272B074600FA53B0 /* View */,
 				7C41FD4B272BFD2700FA53B0 /* Controller */,
+				7CCE86D6272C268F001265A8 /* User.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				7C41FD4C272BFD4300FA53B0 /* LoginViewController.swift */,
+				7CCE86D8272C5554001265A8 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +242,16 @@
 				7C74B4DB272C1E6A00786EFE /* SpinnerView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		7CCE86D3272C2352001265A8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7CCE86D4272C2377001265A8 /* GoogleSignInService.swift */,
+				7C5DEF25272EF3BB0090C307 /* FireStoreService.swift */,
+				7C5DEF27272EF7D50090C307 /* LocationManagerService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,10 +423,15 @@
 				7C74B4DE272C1EA900786EFE /* ShadowManager.swift in Sources */,
 				7C41FD52272C02C400FA53B0 /* UIViewControllerUtility.swift in Sources */,
 				7C41FD3C272B067400FA53B0 /* Coordinator.swift in Sources */,
+				7C5DEF26272EF3BB0090C307 /* FireStoreService.swift in Sources */,
+				7CCE86D9272C5556001265A8 /* ProfileViewController.swift in Sources */,
+				7C5DEF28272EF7D50090C307 /* LocationManagerService.swift in Sources */,
 				7C41FD3E272B069200FA53B0 /* AppCoordinator.swift in Sources */,
+				7CCE86D7272C2690001265A8 /* User.swift in Sources */,
 				7C41FD06272B049100FA53B0 /* AppDelegate.swift in Sources */,
 				7C74B4DA272C1DBF00786EFE /* AnimaButton.swift in Sources */,
 				7C74B4E0272C1EF200786EFE /* UIViewUtility.swift in Sources */,
+				7CCE86D5272C2377001265A8 /* GoogleSignInService.swift in Sources */,
 				7C41FD4D272BFD4300FA53B0 /* LoginViewController.swift in Sources */,
 				7C41FD08272B049100FA53B0 /* SceneDelegate.swift in Sources */,
 				7C41FD55272C1A8200FA53B0 /* FloatingTextField.swift in Sources */,

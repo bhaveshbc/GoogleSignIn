@@ -5,7 +5,6 @@
 //  Created by Bhavesh Chaudhari on 29/10/21.
 //
 
-
 import UIKit
 
 class SpinerLayer: CAShapeLayer {
@@ -75,4 +74,3 @@ extension CGRect {
         set { self = CGRect(x: newValue.x - width / 2, y: newValue.y - height / 2, width: width, height: height) }
     }
 }
-

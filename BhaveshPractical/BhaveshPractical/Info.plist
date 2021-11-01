@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Update User Location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Update User LOcation</string>
+	<key>Privacy – Location When In Use Usage Description</key>
+	<string>Update User Location</string>
+	<key>Privacy – Location Always and When In Use Usage Description</key>
+	<string>update User location</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

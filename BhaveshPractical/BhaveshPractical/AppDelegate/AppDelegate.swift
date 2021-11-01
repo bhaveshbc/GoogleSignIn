@@ -50,10 +50,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       -> Bool {
       return GIDSignIn.sharedInstance.handle(url)
     }
-    
-    
-    
-
-
 }
-
