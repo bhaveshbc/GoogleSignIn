@@ -32,9 +32,29 @@ extension UIViewController {
 
     func showError(with error: Error) {
         if let localizedError = error  as? LocalizedError, let errorDescription = localizedError.errorDescription {
-            
+            showAlertMessage(viewController: self, messageStr: errorDescription, then: nil)
         } else {
-            
+            showAlertMessage(viewController: self, messageStr: error.localizedDescription, then: nil)
+        }
+    }
+    
+    func showSpinner() {
+        let child = SpinnerViewController()
+
+        // add the spinner view controller
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+
+    func hideSpinner() {
+        self.children.forEach {
+            if $0 is SpinnerViewController {
+                $0.willMove(toParent: nil)
+                $0.view.removeFromSuperview()
+                $0.removeFromParent()
+            }
         }
     }
 
@@ -65,5 +85,19 @@ extension UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             completion()
         }
+    }
+}
+
+func showAlertMessage(viewController: UIViewController, messageStr: String, then handler:  (() -> Void)? = nil) {
+    let alertController = UIAlertController(title: "Demo", message: messageStr, preferredStyle: .alert)
+    let OKAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+        if handler != nil {
+            handler!()
+        }
+    })
+    alertController.view.tintColor = AppColor.TopGradientColor
+    DispatchQueue.main.async {
+        alertController.addAction(OKAction)
+        viewController.present(alertController, animated: true, completion: nil)
     }
 }

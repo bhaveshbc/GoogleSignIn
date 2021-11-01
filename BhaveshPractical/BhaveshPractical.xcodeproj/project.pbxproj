@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C03410D2730145800D42F73 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03410C2730145800D42F73 /* SpinnerViewController.swift */; };
 		7C41FD06272B049100FA53B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41FD05272B049100FA53B0 /* AppDelegate.swift */; };
 		7C41FD08272B049100FA53B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41FD07272B049100FA53B0 /* SceneDelegate.swift */; };
 		7C41FD0D272B049100FA53B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C41FD0B272B049100FA53B0 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 		7C74B4DC272C1E6A00786EFE /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4DB272C1E6A00786EFE /* SpinnerView.swift */; };
 		7C74B4DE272C1EA900786EFE /* ShadowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4DD272C1EA900786EFE /* ShadowManager.swift */; };
 		7C74B4E0272C1EF200786EFE /* UIViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74B4DF272C1EF100786EFE /* UIViewUtility.swift */; };
+		7C8C864E273031F700046D10 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C864D273031F700046D10 /* ImageDownloader.swift */; };
+		7C8C86502730331800046D10 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C864F2730331700046D10 /* Constant.swift */; };
 		7CCE86D5272C2377001265A8 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE86D4272C2377001265A8 /* GoogleSignInService.swift */; };
 		7CCE86D7272C2690001265A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE86D6272C268F001265A8 /* User.swift */; };
 		7CCE86D9272C5556001265A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE86D8272C5554001265A8 /* ProfileViewController.swift */; };
@@ -58,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C03410C2730145800D42F73 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		7C41FD02272B049100FA53B0 /* BhaveshPractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BhaveshPractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C41FD05272B049100FA53B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C41FD07272B049100FA53B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		7C74B4DB272C1E6A00786EFE /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		7C74B4DD272C1EA900786EFE /* ShadowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowManager.swift; sourceTree = "<group>"; };
 		7C74B4DF272C1EF100786EFE /* UIViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtility.swift; sourceTree = "<group>"; };
+		7C8C864D273031F700046D10 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		7C8C864F2730331700046D10 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7CCE86D4272C2377001265A8 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
 		7CCE86D6272C268F001265A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CCE86D8272C5554001265A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		7C41FCF9272B049000FA53B0 = {
 			isa = PBXGroup;
 			children = (
+				7C8C864D273031F700046D10 /* ImageDownloader.swift */,
 				7C41FD37272B05E300FA53B0 /* .swiftlint.yml */,
 				7C41FD48272BF11500FA53B0 /* GoogleService-Info.plist */,
 				7C41FD04272B049100FA53B0 /* BhaveshPractical */,
@@ -204,9 +211,9 @@
 		7C41FD4A272BFD1B00FA53B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7C5DEF29272FB97C0090C307 /* Model */,
 				7C41FD3F272B074600FA53B0 /* View */,
 				7C41FD4B272BFD2700FA53B0 /* Controller */,
-				7CCE86D6272C268F001265A8 /* User.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -228,6 +235,8 @@
 				7C41FD56272C1B1500FA53B0 /* Color.swift */,
 				7C74B4DD272C1EA900786EFE /* ShadowManager.swift */,
 				7C74B4DF272C1EF100786EFE /* UIViewUtility.swift */,
+				7C03410C2730145800D42F73 /* SpinnerViewController.swift */,
+				7C8C864F2730331700046D10 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -242,6 +251,14 @@
 				7C74B4DB272C1E6A00786EFE /* SpinnerView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		7C5DEF29272FB97C0090C307 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CCE86D6272C268F001265A8 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7CCE86D3272C2352001265A8 /* Service */ = {
@@ -423,9 +440,11 @@
 				7C74B4DE272C1EA900786EFE /* ShadowManager.swift in Sources */,
 				7C41FD52272C02C400FA53B0 /* UIViewControllerUtility.swift in Sources */,
 				7C41FD3C272B067400FA53B0 /* Coordinator.swift in Sources */,
+				7C8C864E273031F700046D10 /* ImageDownloader.swift in Sources */,
 				7C5DEF26272EF3BB0090C307 /* FireStoreService.swift in Sources */,
 				7CCE86D9272C5556001265A8 /* ProfileViewController.swift in Sources */,
 				7C5DEF28272EF7D50090C307 /* LocationManagerService.swift in Sources */,
+				7C8C86502730331800046D10 /* Constant.swift in Sources */,
 				7C41FD3E272B069200FA53B0 /* AppCoordinator.swift in Sources */,
 				7CCE86D7272C2690001265A8 /* User.swift in Sources */,
 				7C41FD06272B049100FA53B0 /* AppDelegate.swift in Sources */,
@@ -436,6 +455,7 @@
 				7C41FD08272B049100FA53B0 /* SceneDelegate.swift in Sources */,
 				7C41FD55272C1A8200FA53B0 /* FloatingTextField.swift in Sources */,
 				7C74B4D6272C1D1E00786EFE /* BottomCurvedView.swift in Sources */,
+				7C03410D2730145800D42F73 /* SpinnerViewController.swift in Sources */,
 				7C41FD57272C1B1500FA53B0 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,28 +8,33 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import Combine
 class LoginViewController: UIViewController {
     
     @IBOutlet var signInbutton: UIButton!
     
     weak var coordinator: AppCoordinator?
     var googleSignInService: GoogleSignInServiceProtocol!
+    private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance.signOut()
-        googleSignInService = GoogleSignInService(token: "1059491310160-3hlolmgjb74kob5da09cv0een2fi66e0.apps.googleusercontent.com")
         signInbutton.layer.cornerRadius = 17
+        googleSignInService = GoogleSignInService(token: Constant.key)
     }
     
     @IBAction func loginClick(sender: UIButton) {
-        googleSignInService?.signInwith(controller: self, compltion: { [weak self] result in
-            switch result {
-            case .success(let user):
-                self?.coordinator?.moveToSignupViewController(user: user, signInService: self?.googleSignInService)
+        showSpinner()
+        googleSignInService.signInwith(controller: self).sink { compltion in
+            switch compltion {
             case .failure(let error):
-                print(error)
+                self.showError(with: error)
+            case .finished:
+                self.hideSpinner()
             }
-        })
+        } receiveValue: { user in
+            self.coordinator?.moveToSignupViewController(user: user, signInService: self.googleSignInService)
+        }.store(in: &cancellables)
     }
 }

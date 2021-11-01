@@ -6,18 +6,23 @@
 //
 
 import UIKit
+import Combine
 
 class ProfileViewController: UIViewController {
     
     @IBOutlet var userProfile: UIImageView!
     @IBOutlet var userName: UILabel!
     @IBOutlet var userEmail: UILabel!
+    @IBOutlet var longtitude: UILabel!
+    @IBOutlet var latitude: UILabel!
     
     var loggedUser: User?
     var googleSignInService: GoogleSignInServiceProtocol!
     var locationManager: LocationManagerService?
     var firebaseManager: FireStoreService?
     weak var coordinator: AppCoordinator?
+    var imageDonwloader = ImageDownloader()
+    private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +41,7 @@ class ProfileViewController: UIViewController {
     private func setupScreen(user: User) {
         userName.text = user.name
         userEmail.text = user.emailId
-        downloadImage(from: user.profilePic)
+        imageDonwloader.$userIMage.assign(to: \.image, on: self.userProfile).store(in: &cancellables)
     }
     
     @IBAction func logout(sender: UIButton) {
@@ -44,22 +49,6 @@ class ProfileViewController: UIViewController {
         coordinator?.goback()
     }
     
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
-    
-    func downloadImage(from url: URL) {
-        print("Download Started")
-        getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            // always update the UI from the main thread
-            DispatchQueue.main.async() { [weak self] in
-                self?.userProfile.image = UIImage(data: data)
-            }
-        }
-    }
 }
 
 extension ProfileViewController: LocationManagerDelegate {
@@ -70,14 +59,18 @@ extension ProfileViewController: LocationManagerDelegate {
     
     private func updateUserLocation(latitude: Double, longtitude: Double) {
         
+        self.longtitude.text = "\(longtitude)"
+        self.latitude.text = "\(latitude)"
         guard var loggedUser = loggedUser else {
             return
         }
         
         loggedUser.update(latitude: latitude, longtidude: longtitude)
         
-        firebaseManager?.addUser(user: loggedUser, compltion: { error in
-            print(error)
+        firebaseManager?.addUser(user: loggedUser, compltion: { [weak self] error in
+            if let error = error {
+                self?.showError(with: error)
+            }
         })
     }
 }

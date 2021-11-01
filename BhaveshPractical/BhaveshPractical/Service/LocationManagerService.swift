@@ -8,14 +8,14 @@
 import Foundation
 import CoreLocation
 
-protocol  LocationManagerDelegate {
+protocol LocationManagerDelegate: AnyObject {
     func locationUpdate(latitude: Double, longtitude: Double)
 }
 
 class LocationManagerService: NSObject {
     
-    private var locationManager:CLLocationManager?
-    var delegate: LocationManagerDelegate?
+    private var locationManager: CLLocationManager?
+    weak var delegate: LocationManagerDelegate?
     
     override init() {
         super.init()

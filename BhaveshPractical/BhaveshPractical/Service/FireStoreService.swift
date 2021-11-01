@@ -10,10 +10,10 @@ import Firebase
 
 class FireStoreService {
     
-    let db = Firestore.firestore()
+    let dbStore = Firestore.firestore()
     
     func getUser(compltion: @escaping (Result<[User], Error>) -> Void) {
-        db.collection("Users").getDocuments { quesrySnapshot, error in
+        dbStore.collection("Users").getDocuments { quesrySnapshot, error in
             if let error = error {
                 compltion(.failure(error))
             } else {
@@ -46,11 +46,10 @@ class FireStoreService {
         return User(name: name, emailId: email, profilePic: url)
     }
     
-    func addUser(user: User, compltion: @escaping (Error?) -> Void)  {
-        db.collection("Users").document(user.emailId).setData(user.getDict()) { error in
+    func addUser(user: User, compltion: @escaping (Error?) -> Void) {
+        dbStore.collection("Users").document(user.emailId).setData(user.getDict()) { error in
             compltion(error)
         }
     }
     
 }
-
