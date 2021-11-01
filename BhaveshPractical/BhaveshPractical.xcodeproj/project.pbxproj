@@ -129,7 +129,6 @@
 		7C41FCF9272B049000FA53B0 = {
 			isa = PBXGroup;
 			children = (
-				7C8C864D273031F700046D10 /* ImageDownloader.swift */,
 				7C41FD37272B05E300FA53B0 /* .swiftlint.yml */,
 				7C41FD48272BF11500FA53B0 /* GoogleService-Info.plist */,
 				7C41FD04272B049100FA53B0 /* BhaveshPractical */,
@@ -264,6 +263,7 @@
 		7CCE86D3272C2352001265A8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7C8C864D273031F700046D10 /* ImageDownloader.swift */,
 				7CCE86D4272C2377001265A8 /* GoogleSignInService.swift */,
 				7C5DEF25272EF3BB0090C307 /* FireStoreService.swift */,
 				7C5DEF27272EF7D50090C307 /* LocationManagerService.swift */,
